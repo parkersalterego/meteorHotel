@@ -23,6 +23,8 @@
     "eslint-plugin-jsx-a11y": "^6.1.1",
     "eslint-plugin-meteor": "^5.0.0",
     "eslint-plugin-react": "^7.10.0",
+    "faker": "^4.1.0",
+    "lodash": "^4.17.10",
     "meteor-node-stubs": "^0.4.1",
     "simpl-schema": "^1.5.3"
   },

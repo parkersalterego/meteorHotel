@@ -1,14 +1,14 @@
 import { Mongo } from 'meteor/mongo';
-import { SimpleSchema } from 'simpl-schema';
+import SimpleSchema from 'simpl-schema';
 
 SimpleSchema.extendOptions(['autoform']);
 
-const Rooms = new Mongo.Collection('rooms');
+export const Rooms = new Mongo.Collection('rooms');
 
 const RoomSchema = new SimpleSchema({
   roomNumber: { type: Number },
   checkIn: { type: Date },
-  checkout: { type: Date },
+  checkOut: { type: Date },
   tenantId: { type: String },
   available: { type: Boolean },
   needsCleaning: { type: Boolean },
@@ -22,6 +22,4 @@ const RoomSchema = new SimpleSchema({
   },
 });
 
-Rooms.attatchSchema(RoomSchema);
-
-export default Rooms;
+Rooms.attachSchema(RoomSchema);
